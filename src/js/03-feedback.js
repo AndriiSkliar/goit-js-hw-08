@@ -15,6 +15,10 @@ import throttle from 'lodash.throttle';
       }
 
 function setUserInfo() {
+  if (emailInput.value === "" || messageInput.value ==="") {
+    alert("Please fill in all fields!");
+    return
+  }
       const currentState = {
         email: emailInput.value.trim(),
         message: messageInput.value.trim(),
@@ -33,7 +37,7 @@ function submitForm(e) {
   };
 
   console.log(currentState);
-  localStorage.clear();
+  localStorage.removeItem(LOCALSTORAGE_KEY);
   form.reset();
 }
 
