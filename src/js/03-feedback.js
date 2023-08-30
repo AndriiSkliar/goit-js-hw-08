@@ -42,3 +42,4 @@ function submitForm(e) {
   form.reset();
 }
 btnSubmit.addEventListener("click", submitForm);
+
